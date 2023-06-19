@@ -1,0 +1,48 @@
+.todo-wrapper {
+  margin-top: 100px;
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 10px;
+  height: 400px;
+  width: 450px;
+  .btn-todo {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .input {
+    width: 90%;
+    padding: 20px;
+    font-size: 30px;
+  }
+  .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+    margin-bottom: 5px;
+
+    .btn-wrapper {
+      display: flex;
+      gap: 5px;
+      .btn-delete {
+        padding: 0;
+        font-size: 15px;
+      }
+      .btn-complitee {
+        padding: 0;
+        font-size: 15px;
+      }
+    }
+  }
+  .text-todo {
+    &.completed {
+      text-decoration: line-through;
+    }
+  }
+}

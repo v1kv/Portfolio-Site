@@ -1,0 +1,44 @@
+.contact-wrapper {
+  height: 100vh;
+
+  .contact-title {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 96px;
+    color: #ffffff;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+    }
+  }
+  .contact-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 88.5%;
+      color: #ffffff;
+      a {
+        text-decoration: none;
+
+        color: #ffffff;
+      }
+    }
+  }
+}
