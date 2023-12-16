@@ -20,8 +20,6 @@ const Buttons = ({
     >
       {text}
       </button>
-      
-      
   )
 }
 

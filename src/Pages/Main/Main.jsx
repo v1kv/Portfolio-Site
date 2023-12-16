@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Buttons from '../../components/Buttons/Buttons'
-import Header from '../../components/Header'
 import cx from 'classnames'
 import './Main.scss'
 const Main = () => {
@@ -17,7 +16,6 @@ const Main = () => {
   return (
     <>
       <div className="main-page">
-        <Header />
         <div className="title-descriptions">
           <div className="title-name">
             <p className="name">Front-End</p>

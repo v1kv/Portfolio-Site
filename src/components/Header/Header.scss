@@ -17,6 +17,7 @@ header {
       list-style-type: none;
       margin: 0;
       padding: 0;
+      gap: 80px;
 
       li {
         display: inline-block;
@@ -56,6 +57,23 @@ header {
       background-color: rgba(255, 255, 255, 0.5);
 
       transition: all 0.4s;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    flex-direction: column;
+
+    a,
+    p,
+    nav ul li {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    nav ul li {
+      margin-right: 10px;
     }
   }
 }

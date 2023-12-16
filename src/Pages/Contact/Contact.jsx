@@ -1,26 +1,54 @@
-import Header from '../../components/Header'
 import './Contact.scss'
-const Contact = () => {
+import { useForm, ValidationError } from '@formspree/react'
+import Buttons from '../../components/Buttons/Buttons'
+function ContactForm() {
+  const [state, handleSubmit] = useForm('xgegwvyn')
+  if (state.succeeded) {
+    return (
+      <p className="message">
+        Thank you for contacting me, I will definitely write back to you!
+      </p>
+    )
+  }
   return (
-    <>
-      <div className="contact-wrapper">
-        <Header />
-
-        <h2 className="contact-title">Contact</h2>
-
-        <div className="contact-desc">
-          <p className="contact">
-            Mail: <span>dmitriyvolkov2102@icloud.com</span>
-          </p>
-          <p className="contact">
-            GitHub: <a href="https://github.com/v1kv">GitGub Link</a>
-          </p>
-          <p className="contact">
-            Telegram: <a href="https://t.me/vo1kovdmitriy">Telegram Link</a>
-          </p>
+    <div className="contact-wrapper">
+      <form className="form-wrapper" onSubmit={handleSubmit}>
+        <div className="brise-input">
+          <input type="email" name="email" id="email" required />
+          <label>Email</label>
+          <span className="line"></span>
+          <ValidationError
+            className="err"
+            prefix="Email"
+            field="email"
+            errors={state.errors}
+          />
         </div>
-      </div>
-    </>
+        <div class="brise-text">
+          <textarea
+            name="msg"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <label>Message</label>
+          <ValidationError
+            className="err"
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
+        </div>
+        <Buttons
+          type={'submit'}
+          classNames={'btn-contact'}
+          isDisabled={state.submitting}
+          text={'Submite'}
+        />
+      </form>
+    </div>
   )
 }
-export default Contact
+
+export default ContactForm

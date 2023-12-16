@@ -1,9 +1,13 @@
 import RootRouter from './routers'
+import Header from './components/Header'
 import './App.css'
 export default function App() {
   return (
     <div className="container">
-      <RootRouter />
+      <Header />
+      <main className="main">
+        <RootRouter />
+      </main>
     </div>
   )
 }

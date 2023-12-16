@@ -1,5 +1,3 @@
-import Buttons from '../Buttons/Buttons'
-
 import './Cards.scss'
 const Cards = ({ cardsTitle, cardsDesc, img, link }) => {
   return (
