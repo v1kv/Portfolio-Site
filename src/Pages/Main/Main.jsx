@@ -37,7 +37,7 @@ const Main = () => {
         </Link>
       </div>
 
-      <div className={'btn-check-my-skill '}>
+      <div className={'btn-check-my-skill'}>
         <Buttons
           classNames={'button_hola'}
           text={'Check my skills'}
